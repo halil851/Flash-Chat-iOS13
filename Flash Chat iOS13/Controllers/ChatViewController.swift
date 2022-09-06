@@ -25,7 +25,11 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         tableView.dataSource = self
         title = K.appName
+        
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
     }
+    
+    
     
     @IBAction func sendPressed(_ sender: UIButton) {
     }
