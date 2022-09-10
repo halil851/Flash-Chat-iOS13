@@ -17,7 +17,7 @@ class ChatViewController: UIViewController {
     var messages: [Message] = [
         Message(sender: "1@2.com", body: "Hey!"),
         Message(sender: "a@b.com", body: "Helloooo"),
-        Message(sender: "1@2.com", body: "Whats up?"),
+        Message(sender: "1@2.com", body: "Whats up? sdömsdmşsş lsşdl ksşdl kşsflkşsdkl fşksşf lksdşlfksşldfksdşfkşsdkfşskfşskfşksdşfksdşf"),
     ]
     
     override func viewDidLoad() {
@@ -48,8 +48,8 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = messages[indexPath.row].body
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        cell.label.text = messages[indexPath.row].body
         return cell
     }
     
